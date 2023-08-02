@@ -36,6 +36,8 @@ public class User extends HttpServlet {
 			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/audi", "root", "MANISH80");
 		} catch (SQLException | ClassNotFoundException e) {
 			e.printStackTrace();
+		}finally{
+			connection.close();
 		}
 		/*
 		 * System.out.println(forName);
